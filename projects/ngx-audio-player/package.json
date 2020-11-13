@@ -1,0 +1,48 @@
+{
+  "name": "ngx-audio-player",
+  "version": "10.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmudigal/ngx-audio-player.git"
+  },
+  "author": {
+    "name": "Vijayendra Mudigal",
+    "email": "vijayendrap@gmail.com",
+    "url": "https://vijayendra.mudigal.com"
+  },
+  "keywords": [
+    "ngx",
+    "audio",
+    "player",
+    "angular",
+    "angular7",
+    "angular8",
+    "angular9",
+    "angular10",
+    "audio player",
+    "angular audio player",
+    "audio player with playlist",
+    "material style audio player",
+    "material style basic audio player",
+    "material style advanced audio player"
+  ],
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/vmudigal/ngx-audio-player/blob/master/projects/ngx-audio-player/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/vmudigal/ngx-audio-player/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/material": "^10.0.0",
+    "rxjs": "^6.5.5"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
