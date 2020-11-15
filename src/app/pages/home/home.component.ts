@@ -28,9 +28,9 @@ export class HomeComponent {
   // Multiple
   multiple: Track[] = [
     {
-      title: 'In Love | A Himitsu feat. Nori',
+      title: 'Chợt Nhớ',
       link:
-        'https://dl.dropboxusercontent.com/s/9v0psowra7ekhxo/A%20Himitsu%20-%20In%20Love%20%28feat.%20Nori%29.flac?dl=0'
+        'https://firebasestorage.googleapis.com/v0/b/chinhbeo-18d3b.appspot.com/o/ocdxak7owof?alt=media&token=b0376d9b-e9a0-4b40-a58a-a8e2fdec3038'
     },
     {
       title: 'Cartoon – On & On (feat. Daniel Levi) [NCS Release]',
