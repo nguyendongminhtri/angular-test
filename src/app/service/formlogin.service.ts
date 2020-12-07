@@ -11,10 +11,10 @@ class SignUp {
 })
 export class FormloginService {
   //API LOCAL
-  private API_SIGNUP = environment.API_LOCAL+'signup';
+  // private API_SIGNUP = environment.API_LOCAL+'signup';
 
   //API SERVER
-  // private API_SIGNUP = environment.API_SERVER+'signup';
+  private API_SIGNUP = environment.API_SERVER+'signup';
   constructor(private http: HttpClient) { }
   signUp(signup: SignUp): Observable<any>{
     return this.http.post<any>(this.API_SIGNUP, signup);
