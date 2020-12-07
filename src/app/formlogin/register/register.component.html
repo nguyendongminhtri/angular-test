@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px 0;">
+                <form class="form-register" #f="ngForm" (ngSubmit)="f.form.valid&& onSubMit()" novalidate>
+                    <mat-error class="alert alert-warning">{{status}}</mat-error>
+                    <mat-form-field style="width: 350px" appearance="outline">
+                        <mat-label>Name:</mat-label>
+                        <input name="name" [(ngModel)]="form.name" #name="ngModel" matInput placeholder="Please fill the name ..." required>
+                        <mat-icon color="warn" matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-error *ngIf="f.submitted &&name.invalid"></mat-error>
+                        <mat-error *ngIf="name.hasError('required')">
+                            Name is required, Please fill in the form!
+                        </mat-error>
+                    </mat-form-field> <br>
+                    <mat-form-field style="width: 350px" appearance="outline">
+                        <mat-label>Username:</mat-label>
+                        <input name="username" [(ngModel)]="form.username" #username="ngModel" matInput placeholder="Please fill the username ..." required>
+                        <mat-icon color="warn" matSuffix>account_circle</mat-icon>
+                        <mat-error *ngIf="f.submitted &&username.invalid"></mat-error>
+                        <mat-error *ngIf="username.hasError('required')">
+                            Username is required, Please fill in the form!
+                        </mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field style="width: 350px" appearance="outline">
+                        <mat-label>Email:</mat-label>
+                        <input name="email" [(ngModel)]="form.email" [formControl]="emailValidate"  matInput placeholder="Please fill email ... Ex: chinhcomhut@gmail.com" required>
+                        <mat-icon color="warn" matSuffix>mail_outline</mat-icon>
+                        <mat-error *ngIf="emailValidate.hasError('email')&&!emailValidate.hasError('required')">
+                            Please enter a valid email address!! Ex: chinhcomhut@gmail.com
+                        </mat-error>
+                        <mat-error *ngIf="emailValidate.hasError('required')">
+                            Email is required, Please fill in the form!
+                        </mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field style="width: 350px" appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input name="password" [(ngModel)]="form.password" #password="ngModel" matInput [type]="hide ? 'password' : 'text'" required minlength="6">
+                        <button color="warn" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="f.submitted&&password.invalid"></mat-error>
+                        <mat-error *ngIf="password.hasError('required')"> Password is required</mat-error>
+                        <mat-error *ngIf="password.errors?.minlength">Password min is 6 character</mat-error>
+                    </mat-form-field> <br>
+                    <button mat-raised-button color="primary">Register</button>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
